@@ -9,4 +9,11 @@ zuul:
     recipe-catalog:
       path: /recipe-catalog
       serviceId: recipe-catalog
+    recipe-recommendation:
+      path: /recipe-recommendation
+      serviceId: recipe-recommendation
+    uaa:
+      path: /uaa
+      serviceId: authorization-service
+
 
