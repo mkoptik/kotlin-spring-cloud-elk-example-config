@@ -4,16 +4,18 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 zuul:
-  prefix: /api
   routes:
     recipe-catalog:
-      path: /recipe-catalog
+      path: /recipe-catalog/**
       serviceId: recipe-catalog
     recipe-recommendation:
-      path: /recipe-recommendation
+      path: /recipe-recommendation/**
       serviceId: recipe-recommendation
     uaa:
-      path: /uaa
+      path: /uaa/**
       serviceId: authorization-service
+    account:
+      path: /account/**
+      serviceId: account-service
 
 
